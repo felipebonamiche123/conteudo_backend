@@ -1,3 +1,12 @@
+<style>
+    .grid{
+        display: grid;
+        grid-template-rows: auto auto; 
+        grid-template-columns: auto auto auto auto auto;
+        gap: 10px;
+}
+</style>
+
 <h2>Estrutura de repetição - for</h2>
 <p>
     Utilizada para repetir um conjunto de intruções por um
@@ -9,9 +18,20 @@
         //comandos a serem repetidos.
     }
 </pre>
-
+<div class = "grid">
 <?php
-    for($contador = 1; $contador < 10; $contador++){
-        echo "Repetindo essa linha <br>";
+
+for($tabuada = 1; $tabuada <= 10; $tabuada++){
+    echo "<div class = 'tabuada'>"; // é a instrução que envia para a saída qualquer informação, podendo conter texto, números ou variáveis.
+
+    for($contador = 0; $contador <= 10; $contador++){
+    $resultado = $tabuada * $contador; 
+        echo "$tabuada x $contador = $resultado <br>";
     }
+    echo "</div>";
+}
+
+   
+    
 ?>
+</div>
